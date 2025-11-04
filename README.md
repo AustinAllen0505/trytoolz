@@ -313,12 +313,6 @@ The test runner automatically clears Python's cache on page load, ensuring your 
 - Review it to understand how tests are registered and executed
 - You can extend it with additional assertion methods if needed
 
-### Python Documentation
-
-- [Python Built-ins](https://docs.python.org/3/library/functions.html)
-- [itertools](https://docs.python.org/3/library/itertools.html) - For creating generators and iterators
-- [functools](https://docs.python.org/3/library/functools.html) - For higher-order functions
-
 ### PyScript
 
 - [PyScript Docs](https://docs.pyscript.net/)
@@ -333,12 +327,12 @@ TestPylot emphasizes:
 - **Accessibility** - No complex setup required
 - **Learning** - Designed for educational purposes
 
-## License
-
-This framework is for educational purposes.
-
 ---
 
-**Ready to start?** Open `src/main.py` and implement the `multiply()` function to make its tests pass!
+**Ready to start?** 
+
+You could:
+- Explore: open `src/main.py` and implement the `multiply()` function to make its tests pass
+- Replace the `src/main.py` with your own code and put your tests in `tests/test_main.py`
 
 **Happy coding!** 🐍✨
