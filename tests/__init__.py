@@ -1,10 +1,10 @@
 """
-WhyToolz Test Suite
+TryToolz Test Suite
 
 Contains the test modules for each part:
-- test_part1: Foundation functions tests
-- test_part2: Sequences & lazy evaluation tests
-- test_part3: Functions & dictionaries tests
-- test_advanced: Optional advanced challenge tests
+- test_part1: Data Types & Mathematical Operations tests
+- test_part2: Comparisons & Boolean Logic tests
+- test_part3: Lists & Strings tests
+- test_part4: Dictionaries & Advanced Iteration tests
 - test_framework: Custom test runner framework
 """

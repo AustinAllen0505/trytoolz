@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestPylot Framework</title>
+    <title>TryToolz</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- PyScript CSS -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.2/core.css">
@@ -72,9 +75,9 @@
     </script>
 </head>
 <body>
-    <h1>TestPylot Framework</h1>
+    <h1>TryToolz</h1>
     <p style="color: #57606f; margin-bottom: 30px;">
-        A browser-based Python testing framework for educational projects
+        A browser-based Python testing adventure for beginning Python coders built with TestPylot.
     </p>
 
     <!-- Loading indicator -->
@@ -90,7 +93,7 @@
         packages = []
 
         [[fetch]]
-        files = ["src/__init__.py", "src/main.py", "tests/__init__.py", "tests/test_framework.py", "tests/test_main.py"]
+        files = ["src/__init__.py", "src/part1.py", "src/part2.py", "src/part3.py", "src/part4.py","tests/__init__.py", "tests/framework/__init__.py", "tests/framework/test_framework.py", "tests/test_part1.py", "tests/test_part2.py", "tests/test_part3.py", "tests/test_part4.py"]
     </py-config>
 
     <!-- Main Test Runner Script -->
@@ -117,16 +120,37 @@
             print(f"Cleared {len(modules_to_clear)} cached modules")
 
             # Import test framework
-            from tests.test_framework import TestRunner, get_runner
+            from tests.framework.test_framework import TestRunner, get_runner
+
+            # Import test modules - they register themselves on import
+            test_modules = []
 
             # Import test modules - they register themselves on import
             test_modules = []
 
             try:
-                from tests import test_main
-                test_modules.append(test_main)
+                from tests import test_part1
+                test_modules.append(test_part1)
             except ImportError as ie:
-                print(f"test_main not found - skipping: {ie}")
+                print(f"test_part1 not found - skipping: {ie}")
+
+            try:
+                from tests import test_part2
+                test_modules.append(test_part2)
+            except ImportError as ie:
+                print(f"test_part2 not found - skipping: {ie}")
+
+            try:
+                from tests import test_part3
+                test_modules.append(test_part3)
+            except ImportError as ie:
+                print(f"test_part3 not found - skipping: {ie}")
+
+            try:
+                from tests import test_part4
+                test_modules.append(test_part4)
+            except ImportError as ie:
+                print(f"test_part4 not found - skipping: {ie}")
 
             # Get the runner that tests registered with
             runner = get_runner()
